@@ -21,7 +21,7 @@
             if (typeof (Worker) !== "undefined") {
                 if (typeof (worker) == "undefined") {
                     //nuevo hilo en segundo plano
-                    worker = new Worker("/js/webWorker.js");
+                    worker = new Worker("js/webWorker.js");
                 }
                 worker.onmessage = function (evento) {
                     GetResult.innerHTML = evento.data
