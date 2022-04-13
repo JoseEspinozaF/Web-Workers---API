@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos2.css">
+    <title>Trabjando sin Worker</title>
+</head>
+
+<body>
+    <div class="container">
+        <p>Ultimo Numero par obtenido:<span id="resultado"></span> </p>
+        <button>No puede Presionarme Mientras se ejecuta el codigo</button>
+    </div>
+    <script>
+        window.setTimeout(function () {
+            let elemento = document.querySelector("#resultado"); // 
+            function NumerosPrimos() {
+                for (let i = 0; i < 999999; i++) {
+                    elemento.innerHTML = i
+                }
+            }
+            NumerosPrimos()
+        }, 2000);
+    </script>
+</body>
+
+</html>
